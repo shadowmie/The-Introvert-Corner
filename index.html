@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cozy Corner</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            background-color: #f5efe5;
+            color: #493b32;
+            line-height: 1.6;
+        }
+
+        /* NAVBAR */
+
+        header {
+            background-color: #eee5d6;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #d8cbb8;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #604c3d;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #604c3d;
+            margin-left: 25px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #8b6f55;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+            background:
+                linear-gradient(
+                    rgba(245, 239, 229, 0.75),
+                    rgba(245, 239, 229, 0.75)
+                ),
+                url("https://images.unsplash.com/photo-1499750310107-5fef28a66643")
+                center/cover;
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .hero h1 {
+            font-size: 65px;
+            font-weight: normal;
+            margin-bottom: 20px;
+            color: #493b32;
+        }
+
+        .hero p {
+            font-size: 19px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #6f8068;
+            color: white;
+            padding: 13px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background-color: #566650;
+        }
+
+        /* INTRO */
+
+        .intro {
+            text-align: center;
+            padding: 80px 20px 40px;
+        }
+
+        .intro h2 {
+            font-size: 35px;
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+
+        .intro p {
+            max-width: 650px;
+            margin: auto;
+            color: #746458;
+        }
+
+        /* CARDS */
+
+        .categories {
+            padding: 30px 8% 80px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #fffaf2;
+            padding: 35px 20px;
+            text-align: center;
+            border-radius: 15px;
+            border: 1px solid #e3d7c6;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(90, 70, 50, 0.08);
+        }
+
+        .card .icon {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #604c3d;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #7b6c60;
+        }
+
+        /* QUOTE */
+
+        .quote {
+            background-color: #dfe4d8;
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .quote p {
+            max-width: 650px;
+            margin: auto;
+            font-size: 25px;
+            font-style: italic;
+            color: #4f5d49;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background-color: #493b32;
+            color: #f5efe5;
+            text-align: center;
+            padding: 30px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .categories {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .categories {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+            ☕ Cozy Corner
+        </div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Blog</a>
+            <a href="#">About</a>
+        </nav>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>slow days, soft moments</h1>
+
+            <p>
+                A cozy little corner for introverts and students
+                finding beauty in everyday life.
+            </p>
+
+            <a href="#explore" class="button">
+                Explore the cozy life
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- INTRO -->
+
+    <section class="intro" id="explore">
+
+        <h2>Welcome to your cozy corner 🤎</h2>
+
+        <p>
+            Life doesn't always have to be busy.
+            Here you'll find little ideas for studying,
+            resting, romanticizing your everyday routine,
+            and enjoying your own company.
+        </p>
+
+    </section>
+
+
+    <!-- CATEGORIES -->
+
+    <section class="categories">
+
+        <div class="card">
+
+            <div class="icon">📚</div>
+
+            <h3>Student Life</h3>
+
+            <p>
+                Study tips, organization,
+                routines and cozy study sessions.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🌙</div>
+
+            <h3>Introvert Life</h3>
+
+            <p>
+                Quiet hobbies, staying in,
+                boundaries and enjoying solitude.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🕯️</div>
+
+            <h3>Cozy Lifestyle</h3>
+
+            <p>
+                Slow mornings, self-care,
+                decorating and little rituals.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">☕</div>
+
+            <h3>Slow Living</h3>
+
+            <p>
+                Simple pleasures, mindful moments
+                and making ordinary days special.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- QUOTE -->
+
+    <section class="quote">
+
+        <p>
+            "You don't have to live a loud life
+            for it to be a beautiful one."
+        </p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>Made with ☕ and a little bit of coziness.</p>
+
+        <p>© 2026 Cozy Corner</p>
+
+    </footer>
+
+</body>
+</html>
